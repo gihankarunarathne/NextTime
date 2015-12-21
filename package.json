@@ -1,0 +1,35 @@
+{
+  "name": "nexttime",
+  "version": "0.0.1",
+  "description": "Simple tool set to calculate next event occurring date.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "test-debug": "DEBUG=NextTime:* gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gihankarunarathne/NextTime.git"
+  },
+  "keywords": [
+    "Next",
+    "Time",
+    "es6"
+  ],
+  "author": "Gihan Karunarathne <gckarunarathne@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gihankarunarathne/NextTime/issues"
+  },
+  "homepage": "https://github.com/gihankarunarathne/NextTime#readme",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "debug": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0"
+  }
+}
