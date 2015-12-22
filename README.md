@@ -59,6 +59,8 @@ nextTime.nextMonths(new Date(2016,2,24));
 5. [nextMonth(\[date\] \[,upto\])](#nextmonthdate-upto)
 6. [nextMonths(\[startDate\], endDate)](#nextmonthsstartdate-enddate)
 
+*********************************************************************
+
 ### nextDate(date)
 
 Get next date after a given date
@@ -86,6 +88,8 @@ nextTime.nextDate();
 ```javascript
 nextTime.nextDate(new Date(2015,11,1));
 ```
+
+*********************************************************************
 
 ### nextDates(startDate, endDate)
 
@@ -121,6 +125,8 @@ nextTime.nextDates(new Date(2015,11,1), new Date(2015,11,4));
 nextTime.nextDates(new Date(2015,11,4));
 ```
 
+*********************************************************************
+
 ### nextWeek(date)
 
 Get date of next week for a given date
@@ -148,6 +154,8 @@ nextTime.nextWeek();
 ```javascript
 nextTime.nextWeek(new Date(2015,11,1));
 ```
+
+*********************************************************************
 
 ### nextWeeks(startDate, endDate)
 
@@ -182,6 +190,8 @@ nextTime.nextWeeks(new Date(2015,11,1), new Date(2015,11,10));
 ```javascript
 nextTime.nextWeeks(new Date(2015,11,11));
 ```
+
+*********************************************************************
 
 ### nextMonth(date, upto)
 
@@ -222,6 +232,8 @@ nextTime.nextMonth(new Date(2015,11,1));
 ```javascript
 nextTime.nextMonth(new Date(2016,1,29), 31);
 ```
+
+*********************************************************************
 
 ### nextMonths(startDate, endDate)
 
