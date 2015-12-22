@@ -9,9 +9,55 @@ Use NPM to install using;
 
 ## Getting Started
 
-```JavaScript
+NextTime module contains an API to predict next event occurring date or dates.
+Lets assume that current date is `Tue Dec 01 2015 00:00:00 GMT+0530 (IST)`.
+Then following method calls will calculate required events as below;
 
+```JavaScript
+// Create a NextTime instance
+let nextTime = require('nexttime').NextTime;
+
+nextTime.nextDate();
+// Wed Dec 02 2015 00:00:00 GMT+0530 (IST)
+nextTime.nextDate(new Date(2015, 11, 1));
+// Wed Dec 02 2015 00:00:00 GMT+0530 (IST)
+
+nextTime.nextDate(new Date(2015,11,1), new Date(2015,11,4));
+// ['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Wed Dec 02 2015 00:00:00 GMT+0530 (IST)', 'Thu Dec 03 2015 00:00:00 GMT+0530 (IST)']
+nextTime.nextDate(new Date(2015,11,4));
+// ['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Wed Dec 02 2015 00:00:00 GMT+0530 (IST)', 'Thu Dec 03 2015 00:00:00 GMT+0530 (IST)']
+
+nextTime.nextWeek();
+// Tue Dec 08 2015 00:00:00 GMT+0530 (IST)
+nextTime.nextWeek(new Date(2015, 11, 1));
+// Tue Dec 08 2015 00:00:00 GMT+0530 (IST)
+
+nextTime.nextWeeks(new Date(2015,11,1), new Date(2015,11,10));
+// ['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Tue Dec 08 2015 00:00:00 GMT+0530 (IST)']
+nextTime.nextWeeks(new Date(2015,11,11));
+// ['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Tue Dec 08 2015 00:00:00 GMT+0530 (IST)']
+
+nextTime.nextMonth();
+// Fri Jan 01 2016 00:00:00 GMT+0530 (IST)
+nextTime.nextMonth(new Date(2015, 11, 1));
+// Fri Jan 01 2016 00:00:00 GMT+0530 (IST)
+nextTime.nextMonth(new Date(2016,1,29), 31);
+// 'Thu Mar 31 2015 00:00:00 GMT+0530 (IST)'
+
+nextTime.nextMonths(new Date(2015,11,31), new Date(2016,2,24));
+// ['Thu Dec 31 2015 00:00:00 GMT+0530 (IST)', 'Sun Jan 31 2015 00:00:00 GMT+0530 (IST)', 'Mon Feb 29 2015 00:00:00 GMT+0530 (IST)']
+nextTime.nextMonths(new Date(2016,2,24));
+// ['Thu Dec 31 2015 00:00:00 GMT+0530 (IST)', 'Sun Jan 31 2015 00:00:00 GMT+0530 (IST)', 'Mon Feb 29 2015 00:00:00 GMT+0530 (IST)']
 ```
+
+## API
+
+1. [nextDate(\[date\])](#nextdatedate)
+2. [nextDates(\[startDate\], endDate)](#nextdatesstartdate-enddate)
+3. [nextWeek(\[date\])](#nextweekdate)
+4. [nextWeeks(\[startDate\], endDate)](#nextweeksstartdate-enddate)
+5. [nextMonth(\[date\] \[,upto\])](#nextmonthdate-upto)
+6. [nextMonths(\[startDate\], endDate)](#nextmonthsstartdate-enddate)
 
 ### nextDate(date)
 
@@ -20,13 +66,11 @@ Get next date after a given date
 ##### Parameters
 
 - **date** : *{Integer/Date/Date String}* A valid date format
-____(optional)____ Default `new Date()`
+__(optional)__ Default `new Date()`
 
 ##### Return
 
 - *{Date}* Next Date instance
-
-
 
 ###### USAGE:
 
@@ -63,14 +107,14 @@ __(required)__ If `endDate` isn't provided, take `startDate` as `endDate`
 > _['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Wed Dec 02 2015 00:00:00 GMT+0530 (IST)', 'Thu Dec 03 2015 00:00:00 GMT+0530 (IST)']_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,1), new Date(2015,11,4));
+nextTime.nextDates(new Date(2015,11,1), new Date(2015,11,4));
 ```
 
 > If current time is _'Tue Dec 01 2015 00:00:00 GMT+0530 (IST)'_ and call method with _'Fri Dec 04 2015 00:00:00 GMT+0530 (IST)'_ will return
 > _['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Wed Dec 02 2015 00:00:00 GMT+0530 (IST)', 'Thu Dec 03 2015 00:00:00 GMT+0530 (IST)']_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,4));
+nextTime.nextDates(new Date(2015,11,4));
 ```
 
 ### nextWeek(date)
@@ -91,13 +135,13 @@ __(optional)__ Default `new Date()`
 > If current date is _'Tue Dec 01 2015 00:00:00 GMT+0530 (IST)',_ then following method return _'Tue Dec 08 2015 00:00:00 GMT+0530 (IST)'_
 
 ```javascript
-nextTime.nextDate();
+nextTime.nextWeek();
 ```
 
 > If feed with a date _'Tue Dec 01 2015 00:00:00 GMT+0530 (IST)',_ then following method return _'Tue Dec 08 2015 00:00:00 GMT+0530 (IST)'_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,1));
+nextTime.nextWeek(new Date(2015,11,1));
 ```
 
 ### nextWeeks(startDate, endDate)
@@ -121,14 +165,14 @@ __(required)__ If `endDate` isn't provided, take `startDate` as `endDate`
 > _['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Tue Dec 08 2015 00:00:00 GMT+0530 (IST)']_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,1), new Date(2015,11,10));
+nextTime.nextWeeks(new Date(2015,11,1), new Date(2015,11,10));
 ```
 
 > If current time is _'Tue Dec 01 2015 00:00:00 GMT+0530 (IST)'_ and call method with _'Fri Dec 11 2015 00:00:00 GMT+0530 (IST)'_ will return
 > _['Tue Dec 01 2015 00:00:00 GMT+0530 (IST)', 'Tue Dec 08 2015 00:00:00 GMT+0530 (IST)']_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,11));
+nextTime.nextWeeks(new Date(2015,11,11));
 ```
 
 ### nextMonth(date, upto)
@@ -151,19 +195,20 @@ __(optional)__ Default `new Date()`
 > If current date is _'Tue Dec 01 2015 00:00:00 GMT+0530 (IST)',_ then following method return _'Fri Jan 01 2015 00:00:00 GMT+0530 (IST)'_
 
 ```javascript
-nextTime.nextDate();
+nextTime.nextMonth();
 ```
 
 > If feed with a date _'Tue Dec 01 2015 00:00:00 GMT+0530 (IST)',_ then following method return _'Fri Jan 01 2015 00:00:00 GMT+0530 (IST)'_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,1));
+nextTime.nextMonth(new Date(2015,11,1));
 ```
 
-**NOTE**: If `upto` provided _'Mon Feb 29 2016 00:00:00 GMT+0530 (IST)',_ then return _'Thu Mar 31 2015 00:00:00 GMT+0530 (IST)'_
+**NOTE**:
+> If `upto` provided _'Mon Feb 29 2016 00:00:00 GMT+0530 (IST)',_ then return _'Thu Mar 31 2015 00:00:00 GMT+0530 (IST)'_
 
 ```javascript
-nextTime.nextDate(new Date(2016,1,29), 31);
+nextTime.nextMonth(new Date(2016,1,29), 31);
 ```
 
 ### nextMonths(startDate, endDate)
@@ -187,14 +232,14 @@ __(required)__ If `endDate` isn't provided, take `startDate` as `endDate`
 > _['Thu Dec 31 2015 00:00:00 GMT+0530 (IST)', 'Sun Jan 31 2015 00:00:00 GMT+0530 (IST)', 'Mon Feb 29 2015 00:00:00 GMT+0530 (IST)']_
 
 ```javascript
-nextTime.nextDate(new Date(2015,11,31), new Date(2016,2,24));
+nextTime.nextMonths(new Date(2015,11,31), new Date(2016,2,24));
 ```
 
 > If current time is _'Thu Dec 31 2015 00:00:00 GMT+0530 (IST)'_ and call method with _'Thu Mar 24 2016 00:00:00 GMT+0530 (IST)'_ will return
 > _['Thu Dec 31 2015 00:00:00 GMT+0530 (IST)', 'Sun Jan 31 2015 00:00:00 GMT+0530 (IST)', 'Mon Feb 29 2015 00:00:00 GMT+0530 (IST)']_
 
 ```javascript
-nextTime.nextDate(new Date(2016,2,24));
+nextTime.nextMonths(new Date(2016,2,24));
 ```
 
 ## License
