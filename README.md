@@ -61,7 +61,7 @@ nextTime.nextMonths(new Date(2016,2,24));
 
 *********************************************************************
 
-### nextDate(date)
+### 1. nextDate([date])
 
 Get next date after a given date
 
@@ -91,7 +91,7 @@ nextTime.nextDate(new Date(2015,11,1));
 
 *********************************************************************
 
-### nextDates(startDate, endDate)
+### 2. nextDates([startDate], endDate)
 
 Get next dates between given `startDate` and `endDate` period
 
@@ -127,7 +127,7 @@ nextTime.nextDates(new Date(2015,11,4));
 
 *********************************************************************
 
-### nextWeek(date)
+### 3. nextWeek([date])
 
 Get date of next week for a given date
 
@@ -157,7 +157,7 @@ nextTime.nextWeek(new Date(2015,11,1));
 
 *********************************************************************
 
-### nextWeeks(startDate, endDate)
+### 4. nextWeeks([startDate], endDate)
 
 Get dates of next weeks between given `startDate` and `endDate` period
 
@@ -193,7 +193,7 @@ nextTime.nextWeeks(new Date(2015,11,11));
 
 *********************************************************************
 
-### nextMonth(date, upto)
+### 5. nextMonth([date] [,upto])
 
 Get date of next month for a given date
 **NOTE**: When end of month provided, it'll return possible end of next month
@@ -235,7 +235,7 @@ nextTime.nextMonth(new Date(2016,1,29), 31);
 
 *********************************************************************
 
-### nextMonths(startDate, endDate)
+### 6. nextMonths([startDate], endDate)
 
 Get dates of next months between given `startDate` and `endDate` period
 
