@@ -1,6 +1,6 @@
 {
   "name": "nexttime",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple tool set to calculate next event occurring date.",
   "main": "index.js",
   "scripts": {

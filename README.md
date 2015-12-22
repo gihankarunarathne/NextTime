@@ -269,6 +269,14 @@ nextTime.nextMonths(new Date(2015,11,31), new Date(2016,2,24));
 nextTime.nextMonths(new Date(2016,2,24));
 ```
 
+## Testing
+
+1. Install dependencies with `npm install`
+2. Run test cases
+
+ - `npm run test` (just tests)
+ - `npm run test-debug` (test with more debug logs)
+
 ## License
 
 This Software is licensed under [MIT License](/LICENSE)
