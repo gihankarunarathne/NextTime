@@ -67,7 +67,7 @@ Get next date after a given date
 
 - **date** : *{Integer/Date/Date String}* A valid date format
 
- __(optional)__ Default `new Date()`
+ *__(optional)__* Default `new Date()`
 
 ##### Return
 
@@ -95,11 +95,11 @@ Get next dates between given `startDate` and `endDate` period
 
 - **startDate** : *{Integer/Date/Date String}* A valid date format
 
- __(optional)__ Default `new Date()`
+ *__(optional)__* Default `new Date()`
 
 - **endDate** : *{Integer/Date/Date String}* A valid date format
 
- __(required)__ If `endDate` isn't provided, take `startDate` as `endDate`
+ *__(required)__* If `endDate` isn't provided, take `startDate` as `endDate`
 
 ##### Return
 
@@ -129,7 +129,7 @@ Get date of next week for a given date
 
 - **date** : *{Integer/Date/Date String}* A valid date format
 
- __(optional)__ Default `new Date()`
+ *__(optional)__* Default `new Date()`
 
 ##### Return
 
@@ -157,11 +157,11 @@ Get dates of next weeks between given `startDate` and `endDate` period
 
 - **startDate** : *{Integer/Date/Date String}* A valid date format
 
- __(optional)__ Default `new Date()`
+ *__(optional)__* Default `new Date()`
 
 - **endDate** : *{Integer/Date/Date String}* A valid date format
 
- __(required)__ If `endDate` isn't provided, take `startDate` as `endDate`
+ *__(required)__* If `endDate` isn't provided, take `startDate` as `endDate`
 
 ##### Return
 
@@ -192,11 +192,11 @@ Get date of next month for a given date
 
 - **date** : *{Integer/Date/Date String}* A valid date format
 
- __(optional)__ Default `new Date()`
+ *__(optional)__* Default `new Date()`
 
 - **upto** : *{Integer}* Most value end of month can change
 
- __(optional)__ Default set to date of `date` parameter
+ *__(optional)__* Default set to date of `date` parameter
 
 ##### Return
 
@@ -231,11 +231,11 @@ Get dates of next months between given `startDate` and `endDate` period
 
 - **startDate** : *{Integer/Date/Date String}* A valid date format
 
- __(optional)__ Default `new Date()`
+ *__(optional)__* Default `new Date()`
 
 - **endDate** : *{Integer/Date/Date String}* A valid date format
 
- __(required)__ If `endDate` isn't provided, take `startDate` as `endDate`
+ *__(required)__* If `endDate` isn't provided, take `startDate` as `endDate`
 
 ##### Return
 
