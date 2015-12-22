@@ -52,12 +52,12 @@ nextTime.nextMonths(new Date(2016,2,24));
 
 ## API
 
-1. [nextDate(\[date\])](#nextdatedate)
-2. [nextDates(\[startDate\], endDate)](#nextdatesstartdate-enddate)
-3. [nextWeek(\[date\])](#nextweekdate)
-4. [nextWeeks(\[startDate\], endDate)](#nextweeksstartdate-enddate)
-5. [nextMonth(\[date\] \[,upto\])](#nextmonthdate-upto)
-6. [nextMonths(\[startDate\], endDate)](#nextmonthsstartdate-enddate)
+1. [nextDate(\[date\])](#1-nextdatedate)
+2. [nextDates(\[startDate\], endDate)](#2-nextdatesstartdate-enddate)
+3. [nextWeek(\[date\])](#3-nextweekdate)
+4. [nextWeeks(\[startDate\], endDate)](#4-nextweeksstartdate-enddate)
+5. [nextMonth(\[date\] \[,upto\])](#5-nextmonthdate-upto)
+6. [nextMonths(\[startDate\], endDate)](#6-nextmonthsstartdate-enddate)
 
 *********************************************************************
 
